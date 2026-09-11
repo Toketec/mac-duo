@@ -121,7 +121,7 @@ The panel is opaque on purpose and keeps text contrast in every state (pressed, 
 - Apple Silicon Mac (built and measured on an M2 Max)
 - macOS 14 or newer
 - Apple Command Line Tools (`xcode-select --install`) — no Xcode project, no package manager
-- *Optional:* Screen Recording permission for the full desktop effect. Without it the app still runs in a basic mode (angle-driven blur and dimming).
+- Screen Recording permission for the full desktop effect — *optional, but it is the one people trip over:* without it the app falls back to a dark blur/dim overlay that looks like a **black screen** (see the note under [Build and run](#build-and-run)).
 
 ## Build and run
 
@@ -153,6 +153,12 @@ The build is an ad-hoc local signature — no paid developer certificate require
 1. Click the laptop icon in the menu bar → **Enable real desktop effect**.
 2. Allow **Mac Duo** under *System Settings → Privacy & Security → Screen & System Audio Recording* (macOS may ask you to quit and reopen).
 3. Slowly close the lid and open it again — the animation follows continuously. Or press **Preview unfold** to feel it without moving the screen.
+
+> [!IMPORTANT]
+> **Black screen instead of your desktop?** You are looking at the app's **basic mode** — the dark blur/dim fallback it uses whenever it cannot capture the screen. A black screen is what a *missing or stale* Screen Recording permission looks like.
+> 1. Open *System Settings → Privacy & Security → Screen & System Audio Recording*, turn **Mac Duo** on, then quit and reopen the app (macOS asks for this itself).
+> 2. **Already on but still black?** The permission entry has gone stale — this happens easily because every rebuild re-signs the app. In that same list, select **Mac Duo**, remove it with the **−** button, **quit Mac Duo completely**, then add it back with **＋** (pick `dist/Mac Duo.app`, or drag the app into the list) and switch it on. Removing *and re-adding* is the part that fixes it — simply re-ticking the old row usually does nothing.
+> 3. Relaunch the app and press **Preview unfold** to confirm: you should see your own desktop folding, not a dark screen.
 
 Shortcuts and lifecycle: **⌃⌥⌘D** globally pauses/resumes; the menu bar toggle disables angle tracking; the overlay hides itself on sleep and lock and comes back after wake/unlock. Quitting the app stops everything — there is no login item and no background daemon.
 
@@ -223,6 +229,8 @@ dist/                    prebuilt Mac Duo.app + zip (ad-hoc signed, Apple Silico
 ```
 
 ## FAQ
+
+**Why is the screen black / why can't I see my own desktop?** Because the app is in its fallback **basic mode**. Whenever it cannot capture the screen it shows a dark blur/dim overlay instead of your desktop — so a black screen almost always means the Screen Recording permission is missing or stale. Grant it under *System Settings → Privacy & Security → Screen & System Audio Recording*, quit and reopen the app; if it is already switched on, **remove Mac Duo from that list and add it back**, then relaunch. See the important note under [Build and run](#build-and-run).
 
 **Does it change my sleep settings?** No. Closing the lid still sleeps the Mac exactly as before; there is simply no visible animation while the display is off.
 
