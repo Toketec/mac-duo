@@ -1,0 +1,20 @@
+# Build artifacts and local diagnostics
+build/
+*.app
+*.log
+status.json
+
+# macOS
+.DS_Store
+**/.DS_Store
+._*
+
+# Xcode / SwiftPM (not used by the CLI build, ignored for contributors)
+.swiftpm/
+*.xcodeproj
+*.xcworkspace
+DerivedData/
+
+# Editors
+.idea/
+.vscode/

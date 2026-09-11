@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>CFBundleExecutable</key><string>MacDuo</string>
+  <key>CFBundleIdentifier</key><string>local.macduo.app</string>
+  <key>CFBundleName</key><string>Mac Duo</string>
+  <key>CFBundleDisplayName</key><string>Mac Duo</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>1.2.0</string>
+  <key>CFBundleVersion</key><string>3</string>
+  <key>LSMinimumSystemVersion</key><string>14.0</string>
+  <key>LSUIElement</key><true/>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>NSScreenCaptureUsageDescription</key><string>Mac Duo 使用屏幕画面，在开合显示屏时呈现实时透视和渐进模糊。画面仅在本机内存中处理，不保存、不上传。</string>
+</dict></plist>
