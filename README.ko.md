@@ -123,6 +123,21 @@
 
 ## 빌드와 실행
 
+### 빌드된 바이너리(가장 빠름)
+
+`dist/`에 바로 실행할 수 있는 **`Mac Duo.app`** 과 `MacDuo-1.2.0-arm64.zip`이 포함되어 있습니다 — Apple Silicon, macOS 14 이상, ad-hoc 서명.
+
+```sh
+git clone https://github.com/Toketec/mac-duo.git
+cd mac-duo
+xattr -dr com.apple.quarantine 'dist/Mac Duo.app'   # 다운로드 격리 플래그 해제
+open 'dist/Mac Duo.app'
+```
+
+ad-hoc 서명이라 첫 실행 시 Gatekeeper가 확인을 요청합니다(우클릭 → "열기"도 가능). 최신 코드를 쓰려면 아래 소스 빌드가 가장 확실합니다.
+
+### 소스에서 빌드
+
 ```sh
 git clone https://github.com/Toketec/mac-duo.git
 cd mac-duo
@@ -194,6 +209,7 @@ Resources/Fold.metal     투영과 다단계 가우시안 셰이딩
 Tests/                   상태 테스트 · 네이티브 윈도우 테스트 · 성능 하네스
 scripts/                 빌드, 실행, 세 가지 테스트 진입점
 docs/images/             README 자산(합성 콘텐츠만)
+dist/                    빌드된 Mac Duo.app과 zip(ad-hoc 서명, Apple Silicon)
 ```
 
 ## FAQ

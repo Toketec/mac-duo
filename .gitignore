@@ -1,6 +1,5 @@
 # Build artifacts and local diagnostics
 build/
-*.app
 *.log
 status.json
 

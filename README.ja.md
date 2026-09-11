@@ -123,6 +123,21 @@
 
 ## ビルドと実行
 
+### ビルド済みバイナリ（最短）
+
+`dist/` にすぐ実行できる **`Mac Duo.app`** と `MacDuo-1.2.0-arm64.zip` を同梱しています —— Apple Silicon、macOS 14 以降、ad-hoc 署名。
+
+```sh
+git clone https://github.com/Toketec/mac-duo.git
+cd mac-duo
+xattr -dr com.apple.quarantine 'dist/Mac Duo.app'   # ダウンロード隔離フラグを解除
+open 'dist/Mac Duo.app'
+```
+
+ad-hoc 署名のため、初回起動時に Gatekeeper が確認します（右クリック →「開く」でも可）。最新のコードを動かしたい場合は、下記のソースからのビルドが確実です。
+
+### ソースからビルド
+
 ```sh
 git clone https://github.com/Toketec/mac-duo.git
 cd mac-duo
@@ -196,6 +211,7 @@ Resources/Fold.metal     投影と多段ガウスのシェーディング
 Tests/                   状態テスト · ネイティブウィンドウテスト · 性能ハーネス
 scripts/                 ビルド、実行、3 つのテストエントリポイント
 docs/images/             README 用アセット（合成コンテンツのみ）
+dist/                    ビルド済み Mac Duo.app と zip（ad-hoc 署名、Apple Silicon）
 ```
 
 ## FAQ

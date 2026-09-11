@@ -123,6 +123,21 @@
 
 ## 构建与运行
 
+### 预编译产物（最快上手）
+
+`dist/` 目录提供可直接运行的 **`Mac Duo.app`** 以及 `MacDuo-1.2.0-arm64.zip`——Apple Silicon、macOS 14+、ad-hoc 签名。
+
+```sh
+git clone https://github.com/Toketec/mac-duo.git
+cd mac-duo
+xattr -dr com.apple.quarantine 'dist/Mac Duo.app'   # 清除下载隔离标记
+open 'dist/Mac Duo.app'
+```
+
+因为是 ad-hoc 签名，首次启动时 Gatekeeper 会询问（右键 →「打开」同样可行）。想跑最新代码，仍建议按下文从源码构建。
+
+### 从源码构建
+
 ```sh
 git clone https://github.com/Toketec/mac-duo.git
 cd mac-duo
@@ -202,6 +217,7 @@ Resources/Fold.metal     投影与多级高斯着色
 Tests/                   状态测试 · 原生窗口测试 · 性能测试框架
 scripts/                 构建、运行与三个测试入口
 docs/images/             README 素材（仅合成内容）
+dist/                    预编译 Mac Duo.app 与 zip（ad-hoc 签名，Apple Silicon）
 ```
 
 ## 常见问题

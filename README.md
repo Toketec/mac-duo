@@ -124,6 +124,21 @@ The panel is opaque on purpose and keeps text contrast in every state (pressed, 
 
 ## Build and run
 
+### Prebuilt binary (fastest)
+
+`dist/` ships a ready-to-run **`Mac Duo.app`** plus `MacDuo-1.2.0-arm64.zip` — Apple Silicon, macOS 14+, ad-hoc signed.
+
+```sh
+git clone https://github.com/Toketec/mac-duo.git
+cd mac-duo
+xattr -dr com.apple.quarantine 'dist/Mac Duo.app'   # clear the download flag
+open 'dist/Mac Duo.app'
+```
+
+The signature is ad-hoc, so Gatekeeper will ask before the first launch (right-click → **Open** works too). Building from source below is still the cleanest way to run the newest code.
+
+### Build from source
+
 ```sh
 git clone https://github.com/Toketec/mac-duo.git
 cd mac-duo
@@ -203,6 +218,7 @@ Resources/Fold.metal     projection + multi-level Gaussian shading
 Tests/                   state tests · native window test · performance harness
 scripts/                 build, run, and the three test entry points
 docs/images/             README assets (synthetic content only)
+dist/                    prebuilt Mac Duo.app + zip (ad-hoc signed, Apple Silicon)
 ```
 
 ## FAQ
