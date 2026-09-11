@@ -19,6 +19,7 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-3fb950)](#요구-사항)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+[![Download](https://img.shields.io/github/v/release/Toketec/mac-duo?label=download&color=2ea44f&logo=apple&logoColor=white)](https://github.com/Toketec/mac-duo/releases/latest)
 [![Stars](https://img.shields.io/github/stars/Toketec/mac-duo?style=flat&color=f0c419)](https://github.com/Toketec/mac-duo/stargazers)
 
 </div>
@@ -125,7 +126,7 @@
 
 ### 빌드된 바이너리(가장 빠름)
 
-`dist/`에 바로 실행할 수 있는 **`Mac Duo.app`** 과 `MacDuo-1.2.0-arm64.zip`이 포함되어 있습니다 — Apple Silicon, macOS 14 이상, ad-hoc 서명.
+**⬇️ [최신 릴리스 다운로드](https://github.com/Toketec/mac-duo/releases/latest)** 로 바이너리를 받을 수 있습니다. 저장소의 `dist/`에도 바로 실행할 수 있는 **`Mac Duo.app`** 과 `MacDuo-1.2.0-arm64.zip`이 포함되어 있습니다 — Apple Silicon, macOS 14 이상, ad-hoc 서명.
 
 ```sh
 git clone https://github.com/Toketec/mac-duo.git

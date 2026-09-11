@@ -19,6 +19,7 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-3fb950)](#動作環境)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+[![Download](https://img.shields.io/github/v/release/Toketec/mac-duo?label=download&color=2ea44f&logo=apple&logoColor=white)](https://github.com/Toketec/mac-duo/releases/latest)
 [![Stars](https://img.shields.io/github/stars/Toketec/mac-duo?style=flat&color=f0c419)](https://github.com/Toketec/mac-duo/stargazers)
 
 </div>
@@ -125,7 +126,7 @@
 
 ### ビルド済みバイナリ（最短）
 
-`dist/` にすぐ実行できる **`Mac Duo.app`** と `MacDuo-1.2.0-arm64.zip` を同梱しています —— Apple Silicon、macOS 14 以降、ad-hoc 署名。
+**⬇️ [最新リリースをダウンロード](https://github.com/Toketec/mac-duo/releases/latest)** するとバイナリを取得できます。リポジトリ内の `dist/` にも、すぐ実行できる **`Mac Duo.app`** と `MacDuo-1.2.0-arm64.zip` を同梱しています —— Apple Silicon、macOS 14 以降、ad-hoc 署名。
 
 ```sh
 git clone https://github.com/Toketec/mac-duo.git

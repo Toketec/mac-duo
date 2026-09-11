@@ -19,6 +19,7 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-3fb950)](#环境要求)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+[![Download](https://img.shields.io/github/v/release/Toketec/mac-duo?label=download&color=2ea44f&logo=apple&logoColor=white)](https://github.com/Toketec/mac-duo/releases/latest)
 [![Stars](https://img.shields.io/github/stars/Toketec/mac-duo?style=flat&color=f0c419)](https://github.com/Toketec/mac-duo/stargazers)
 
 </div>
@@ -125,7 +126,7 @@
 
 ### 预编译产物（最快上手）
 
-`dist/` 目录提供可直接运行的 **`Mac Duo.app`** 以及 `MacDuo-1.2.0-arm64.zip`——Apple Silicon、macOS 14+、ad-hoc 签名。
+**⬇️ [下载最新 Release](https://github.com/Toketec/mac-duo/releases/latest)** 直接获取二进制；仓库内的 `dist/` 目录也提供可直接运行的 **`Mac Duo.app`** 以及 `MacDuo-1.2.0-arm64.zip`——Apple Silicon、macOS 14+、ad-hoc 签名。
 
 ```sh
 git clone https://github.com/Toketec/mac-duo.git

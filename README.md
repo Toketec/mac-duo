@@ -19,6 +19,7 @@ Native, GPU-accelerated, 120 Hz. No third-party dependencies.
 [![Dependencies](https://img.shields.io/badge/dependencies-none-3fb950)](#requirements)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+[![Download](https://img.shields.io/github/v/release/Toketec/mac-duo?label=download&color=2ea44f&logo=apple&logoColor=white)](https://github.com/Toketec/mac-duo/releases/latest)
 [![Stars](https://img.shields.io/github/stars/Toketec/mac-duo?style=flat&color=f0c419)](https://github.com/Toketec/mac-duo/stargazers)
 
 </div>
@@ -126,7 +127,7 @@ The panel is opaque on purpose and keeps text contrast in every state (pressed, 
 
 ### Prebuilt binary (fastest)
 
-`dist/` ships a ready-to-run **`Mac Duo.app`** plus `MacDuo-1.2.0-arm64.zip` — Apple Silicon, macOS 14+, ad-hoc signed.
+**⬇️ [Download the latest release](https://github.com/Toketec/mac-duo/releases/latest)** for the attached binary — or use the copy committed here in `dist/`: a ready-to-run **`Mac Duo.app`** plus `MacDuo-1.2.0-arm64.zip` — Apple Silicon, macOS 14+, ad-hoc signed.
 
 ```sh
 git clone https://github.com/Toketec/mac-duo.git
